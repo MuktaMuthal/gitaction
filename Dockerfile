@@ -1,5 +1,6 @@
 FROM docker.io/ubuntu
 
-RUN touch day1 && \
-    mkdir testing && \
-    mkdir kucl
+RUN apt update -y
+RUN apt install iputils-ping -y
+
+CMD ["ping","google.com"]
